@@ -22,14 +22,14 @@ gulp.task('watch', function () {
 
 
 gulp.task('css', function () {
-  gulp.src(['bower_components/bootstrap/dist/css/bootstrap.min.css', 'bower_components/cartodb.js/themes/css/cartodb.css', 'style.css'])
+  gulp.src(['bower_components/bootstrap/dist/css/bootstrap.min.css', 'style.css'])
     .pipe(concat('all.min.css'))
     .pipe(minifyCss())
     .pipe(gulp.dest('.'));
 });
  
 gulp.task('js', function () {
-  gulp.src(['bower_components/jquery/dist/jquery.min.js', 'bower_components/bootstrap/dist/js/bootstrap.min.js', 'bower_components/d3/d3.min.js', 'app.js'])
+  gulp.src(['bower_components/jquery/dist/jquery.min.js','bower_components/bootstrap/dist/js/bootstrap.min.js', 'bower_components/cartodb.js/cartodb.js', 'bower_components/d3/d3.min.js', 'app.js'])
     .pipe(concat('all.min.js'))
     .pipe(uglifiy())
     .pipe(gulp.dest('.'));
