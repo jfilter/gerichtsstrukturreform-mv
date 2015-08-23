@@ -11,6 +11,13 @@ html, body {
   margin: 1em 0;
 }
 
+@media (max-width:500px) {
+  .map {
+    height: 400px;
+    width: 90%;
+  }
+}
+
 text {
   fill: white;
   font: 10px sans-serif;
